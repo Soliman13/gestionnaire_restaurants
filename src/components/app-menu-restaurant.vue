@@ -43,3 +43,8 @@ export default {
   }
 };
 </script>
+<style>
+.card{
+  border: solid 2px green;
+}
+</style>
