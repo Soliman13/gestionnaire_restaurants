@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="container" id="app">
     <h1>Gestionnaire de restaurants</h1>
     <ListeRestaurants/>
   </div>

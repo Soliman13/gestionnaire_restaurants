@@ -9,10 +9,20 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-Vue.use(BootstrapVue);
+// Import de FontAwesome
+import { faForward } from "@fortawesome/free-solid-svg-icons";
+import { faBackward } from "@fortawesome/free-solid-svg-icons";
+import { faFastForward } from "@fortawesome/free-solid-svg-icons";
+import { faFastBackward } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faTrash)
-library.add(faEdit)
+library.add(faEdit);
+library.add(faTrash);
+library.add(faForward);
+library.add(faFastForward);
+library.add(faBackward);
+library.add(faFastBackward);
+
+Vue.use(BootstrapVue);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
