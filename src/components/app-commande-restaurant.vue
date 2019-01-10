@@ -5,30 +5,21 @@
         <div class="modal-container">
           <div class="modal-header">
             <slot name="header">
-              <p id="nomRestau">{{restauSelected.name}}</p>
+              <p id="recap">Récapitulatif commande</p>
             </slot>
           </div>
 
           <div class="modal-body">
-            <slot
-              name="body"
-            >Adresse : {{restauSelected.address.street}}, {{restauSelected.address.zipcode}} {{restauSelected.borough}}</slot>
+            <slot name="body"></slot>
           </div>
 
-          <div v-show="showMenu" class="modal-footer">
+          <div class="modal-footer">
             <slot name="footer">
-              <app-menu-restaurant></app-menu-restaurant>
             </slot>
           </div>
           <div class="modal-footer">
             <slot name="footer">
-              <app-commande-restaurant v-if="showCommande" @close="showCommande = false"></app-commande-restaurant>
-              <button class="modal-default-button" @click="showCommande = true">Passer la commande</button>
-              <button
-                class="modal-default-button"
-                @click="showMenu? showMenu = false : showMenu = true"
-              >Voir le menu</button>
-              <button class="modal-default-button" @click="$emit('close'), showMenu=false">Fermer</button>
+              <button class="modal-default-button" @click="$emit('close')">Fermer</button>
             </slot>
           </div>
         </div>
@@ -38,32 +29,18 @@
 </template>
 
 <script>
-import RestauMenu from "./app-menu-restaurant.vue";
-import CommandeRestau from "./app-commande-restaurant.vue";
-
 export default {
-  name: "app-details-restaurant",
-  props: {
-    restauSelected: Object
-  },
+  name: "app-commande-restaurant",
+  props: {},
   data: () => ({
-    showMenu: false,
-    showCommande: false
   }),
-  components: {
-    "app-menu-restaurant": RestauMenu,
-    "app-commande-restaurant": CommandeRestau
-  },
+  components: {},
   mounted() {},
   methods: {}
 };
 </script>
 
 <style>
-#nomRestau {
-  font-size: 20px;
-}
-
 .modal-mask {
   position: fixed;
   z-index: 9998;

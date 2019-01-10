@@ -1,21 +1,21 @@
 <template>
-  <transition>
+  <div>
     <div key="menu">
       <div>Menu</div>
       <!-- <div>Entrée : {{menu[0][0]}}</div>
       <div>Plat : {{menu[1]}}</div>
       <div>Dessert : {{menu[2]}}</div>-->
       <ul>
-        <li v-bind:key="value" v-for="(value,key) in entrees">{{ value }} : {{key}}</li>
+        <li v-bind:key="value" v-for="(value,key) in entrees">{{ key }} : {{value}}</li>
       </ul>
       <ul>
-        <li v-bind:key="value" v-for="(value,key) in plats">{{ value }} : {{key}}</li>
+        <li v-bind:key="value" v-for="(value,key) in plats">{{ key }} : {{value}}</li>
       </ul>
       <ul>
-        <li v-bind:key="value" v-for="(value,key) in desserts">{{ value }} : {{key}}</li>
+        <li v-bind:key="value" v-for="(value,key) in desserts">{{ key }} : {{value}}</li>
       </ul>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>
@@ -33,11 +33,9 @@ export default {
       Tiramisu: "4€",
       "Glace à la vanille": "5€",
       "Fondant au chocolat": "3,50€"
-    },
+    }
   }),
-  mounted() {
-  },
-  methods: {
-  }
+  mounted() {},
+  methods: {}
 };
 </script>
