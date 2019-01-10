@@ -123,19 +123,29 @@
           <th colspan="2">Action</th>
         </tr>
       </tfoot>
-    </table>
-    <button class="btn btn-danger" v-on:click="firstPage()">Première page</button>
+    </table><br>
+    <button title="Première page" class="btn btn-danger" v-on:click="firstPage()">
+      <font-awesome-icon icon="fast-backward"/>
+    </button>
     <button
+      title="Précédent"
       class="btn btn-primary"
       v-bind:disabled="precedentDisable()"
       v-on:click="precedent()"
-    >Précédent</button>
+    >
+      <font-awesome-icon icon="backward"/>
+    </button>
     <button
+      title="Suivant"
       class="btn btn-primary"
       v-bind:disabled="suivantDisable(nbreResto)"
       v-on:click="suivant(nbreResto)"
-    >Suivant</button>
-    <button class="btn btn-danger" v-on:click="lastPage()">Dernière Page</button>
+    >
+      <font-awesome-icon icon="forward"/>
+    </button>
+    <button title="Dernière page" class="btn btn-danger" v-on:click="lastPage()">
+      <font-awesome-icon icon="fast-forward"/>
+    </button>
   </div>
 </template>
 

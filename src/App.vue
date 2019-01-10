@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="container" id="app">
     <h1>Gestionnaire de restaurants</h1>
     <ListeRestaurants/>
   </div>
@@ -24,5 +24,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  border: 5px solid blue;
 }
 </style>
